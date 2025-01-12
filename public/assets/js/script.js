@@ -1,5 +1,5 @@
 'use strict';
-import env from 'config.js';
+
 
 /**
  * add event on element
