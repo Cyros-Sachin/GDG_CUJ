@@ -84,7 +84,7 @@ form.addEventListener('submit', async (e) => {
   const email = document.getElementById('Email').value;
 
   try {
-    const response = await fetch('http://localhost:3000/send-email', {
+    const response = await fetch('${import.meta.env.BACKEND_URL}/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ feedbackForm.addEventListener('submit', async (e) => {
   const message = document.getElementById('message').value;
 
   try {
-    const response = await fetch('http://localhost:3000/feedback', {
+    const response = await fetch('${import.meta.env.BACKEND_URL}/feedback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, message }),
