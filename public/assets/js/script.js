@@ -139,7 +139,7 @@ feedbackForm.addEventListener('submit', async (e) => {
   const message = document.getElementById('message').value;
 
   try {
-    const response = await fetch('${import.meta.env.VITE_BACKEND_URL}/feedback', {
+    const response = await fetch('https://gdg-cuj-backend.vercel.app/feedback', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
