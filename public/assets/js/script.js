@@ -75,7 +75,7 @@ document.getElementById('button').addEventListener('click', function () {
   video.play();
 });
 
-
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const form = document.getElementById('newsletterForm');
 
 form.addEventListener('submit', async (e) => {
@@ -84,7 +84,7 @@ form.addEventListener('submit', async (e) => {
   const email = document.getElementById('Email').value;
 
   try {
-    const response = await fetch('${import.meta.env.VITE_BACKEND_URL}/send-email', {
+    const response = await fetch('${backendUrl}/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
