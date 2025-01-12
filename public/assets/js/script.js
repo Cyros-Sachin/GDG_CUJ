@@ -83,7 +83,7 @@ form.addEventListener('submit', async (e) => {
   const email = document.getElementById('Email').value;
 
   try {
-    const response = await fetch('${env.BACKEND_URL}/send-email', {
+    const response = await fetch('https://gdg-cuj-backend.vercel.app/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
