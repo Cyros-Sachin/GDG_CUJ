@@ -45,7 +45,7 @@ addEventOnElem(navLinks, "click", closeNavbar);
 
 /*
  * header active when scroll down to 100px
-*/
+ */
 
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
@@ -89,7 +89,9 @@ form.addEventListener('submit', async (e) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({
+        email
+      }),
     });
 
     if (response.ok) {
@@ -140,8 +142,14 @@ feedbackForm.addEventListener('submit', async (e) => {
   try {
     const response = await fetch('${import.meta.env.VITE_BACKEND_URL}/feedback', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, message }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message
+      }),
     });
 
     if (response.ok) {
